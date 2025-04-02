@@ -258,42 +258,216 @@
 //}
 
 
-#include <iostream>
-#include <string>
-using namespace std;
-//字符串拼接
-void test01()
-{
-	//重载方式
-	string str1 = "我";
+//#include <iostream>
+//#include <string>
+//using namespace std;
+////字符串拼接
+//void test01()
+//{
+//	//重载方式
+//	string str1 = "我";
+//
+//	str1 += "爱玩游戏";
+//
+//	cout << "str1 = " << str1 << endl;
+//
+//	str1 += ':';
+//
+//	cout << "str1 = " << str1 << endl;
+//
+//	string str2 = "LOL DNF";
+//
+//	str1 += str2;
+//
+//	cout << "str1 = " << str1 << endl;
+//
+//    //append方式
+//	string str3 = "I";
+//	str3.append(" love ");
+//	str3.append("game abcde", 4);
+//	//str3.append(str2);
+//	str3.append(str2, 4, 3); // 从下标4位置开始 ，截取3个字符，拼接到字符串末尾
+//	cout << "str3 = " << str3 << endl;
+//}
+//int main() {
+//
+//	test01();
+//
+//	system("pause");
+//
+//	return 0;
+//}
 
-	str1 += "爱玩游戏";
+//#include <iostream>
+//#include <string>
+//using namespace std;
+////查找和替换
+//void test01()
+//{
+//	//查找
+//	string str1 = "abcdefg";
+//	//从左往右
+//	int pos = str1.find("de");
+//
+//	if (pos == -1)
+//	{
+//		cout << "未找到" << endl;
+//	}
+//	else
+//	{
+//		cout << "pos = " << pos << endl;
+//	}
+//
+//	//从右往左
+//	pos = str1.rfind("de");
+//
+//	cout << "pos = " << pos << endl;
+//
+//}
+//
+//void test02()
+//{
+//	//替换
+//	string str1 = "abcdefgde";
+//	str1.replace(1, 3, "1111");
+//
+//	cout << "str1 = " << str1 << endl;
+//}
+//
+//int main() {
+//
+//	test01();
+//	test02();
+//
+//	system("pause");
+//
+//	return 0;
+//}
 
-	cout << "str1 = " << str1 << endl;
 
-	str1 += ':';
+//#include <iostream>
+//#include <string>
+//using namespace std;
+////字符串比较
+//void test01()
+//{
+//
+//	string s1 = "hello";
+//	string s2 = "aello";
+//
+//	int ret = s1.compare(s2);
+//
+//	if (ret == 0) {
+//		cout << "s1 等于 s2" << endl;
+//	}
+//	else if (ret > 0)
+//	{
+//		cout << "s1 大于 s2" << endl;
+//	}
+//	else
+//	{
+//		cout << "s1 小于 s2" << endl;
+//	}
+//
+//}
+//
+//int main() {
+//
+//	test01();
+//
+//	system("pause");
+//
+//	return 0;
+//}
 
-	cout << "str1 = " << str1 << endl;
 
-	string str2 = "LOL DNF";
+//#include <iostream>
+//#include <string>
+//using namespace std;
+//void test01()
+//{
+//	string str = "hello world";
+//
+//	for (int i = 0; i < str.size(); i++)
+//	{
+//		cout << str[i] << " ";
+//	}
+//	cout << endl;
+//
+//	for (int i = 0; i < str.size(); i++)
+//	{
+//		cout << str.at(i) << " ";
+//	}
+//	cout << endl;
+//
+//
+//	//字符修改
+//	str[0] = 'x';
+//	str.at(1) = 'x';
+//	cout << str << endl;
+//
+//}
+//
+//int main() {
+//
+//	test01();
+//
+//	system("pause");
+//
+//	return 0;
+//}
 
-	str1 += str2;
+//#include <iostream>
+//#include <string>
+//using namespace std;
+////字符串插入和删除
+//void test01()
+//{
+//    //插入
+//	string str = "hello";
+//	str.insert(1, "111");//从1号位置开始插入111
+//	cout << str << endl;
+//
+//	//删除
+//	str.erase(1, 3);  //从1号位置开始3个字符
+//	cout << str << endl;
+//}
+//
+//int main() {
+//
+//	test01();
+//
+//	system("pause");
+//
+//	return 0;
+//}
 
-	cout << "str1 = " << str1 << endl;
 
-    //append方式
-	string str3 = "I";
-	str3.append(" love ");
-	str3.append("game abcde", 4);
-	//str3.append(str2);
-	str3.append(str2, 4, 3); // 从下标4位置开始 ，截取3个字符，拼接到字符串末尾
-	cout << "str3 = " << str3 << endl;
-}
-int main() {
-
-	test01();
-
-	system("pause");
-
-	return 0;
-}
+//#include <iostream>
+//#include <string>
+//using namespace std;
+////子串
+//void test01()
+//{
+//
+//	string str = "abcdefg";
+//	string subStr = str.substr(1, 3);//从1号位置开始，截取3个字符
+//	cout << "subStr = " << subStr << endl;
+//
+//	string email = "hello@sina.com";
+//	int pos = email.find("@");//查找@号
+//	string username = email.substr(0,pos);//截取@号之前的字符
+//	string Email = email.substr(pos, email.size());//截取@号之后的字符
+//	cout << "username: " << username << endl;
+//    cout << "Email: " << Email << endl;
+//
+//}
+//
+//int main() {
+//
+//	test01();
+//
+//	system("pause");
+//
+//	return 0;
+//}
