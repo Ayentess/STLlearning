@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "D:\\vs2022Project\\STLlearning\\STLlearning\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8A51D5FC-4CAC-4B6E-8521-ACC9C95911AE}|STLlearning.vcxproj|D:\\vs2022Project\\STLlearning\\STLlearning\\vector.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{8A51D5FC-4CAC-4B6E-8521-ACC9C95911AE}|STLlearning.vcxproj|solutionrelative:vector.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{8A51D5FC-4CAC-4B6E-8521-ACC9C95911AE}|STLlearning.vcxproj|D:\\vs2022Project\\STLlearning\\STLlearning\\STL.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{8A51D5FC-4CAC-4B6E-8521-ACC9C95911AE}|STLlearning.vcxproj|solutionrelative:STL.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,12 +27,12 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "vector.cpp",
-              "DocumentMoniker": "D:\\vs2022Project\\STLlearning\\STLlearning\\vector.cpp",
-              "RelativeDocumentMoniker": "vector.cpp",
-              "ToolTip": "D:\\vs2022Project\\STLlearning\\STLlearning\\vector.cpp",
-              "RelativeToolTip": "vector.cpp",
-              "ViewState": "AgIAAMUBAAAAAAAAAAAgwNgBAAADAAAAAAAAAA==",
+              "Title": "STL.cpp",
+              "DocumentMoniker": "D:\\vs2022Project\\STLlearning\\STLlearning\\STL.cpp",
+              "RelativeDocumentMoniker": "STL.cpp",
+              "ToolTip": "D:\\vs2022Project\\STLlearning\\STLlearning\\STL.cpp",
+              "RelativeToolTip": "STL.cpp",
+              "ViewState": "AgIAAI0EAAAAAAAAAAAAAJ8EAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-03-31T15:15:41.551Z",
               "EditorCaption": ""
