@@ -1,3 +1,7 @@
-﻿  vector.cpp
-D:\vs2022Project\STLlearning\STLlearning\vector.cpp(1106,12): warning C4244: “参数”: 从“time_t”转换到“unsigned int”，可能丢失数据
-  STLlearning.vcxproj -> D:\vs2022Project\STLlearning\STLlearning\x64\Debug\STLlearning.exe
+﻿  STL.cpp
+D:\vs2022Project\STLlearning\STLlearning\STL.cpp(1887,2): error C2664: “void printSet(std::set<Person,std::less<Person>,std::allocator<Person>> &)”: 无法将参数 1 从“std::set<Person,comparePerson,std::allocator<Person>>”转换为“std::set<Person,std::less<Person>,std::allocator<Person>> &”
+      D:\vs2022Project\STLlearning\STLlearning\STL.cpp(1864,6):
+      参见“printSet”的声明
+      D:\vs2022Project\STLlearning\STLlearning\STL.cpp(1887,2):
+      尝试匹配参数列表“(std::set<Person,comparePerson,std::allocator<Person>>)”时
+  

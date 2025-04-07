@@ -1118,95 +1118,781 @@
 //	return 0;
 //}
 
-#include<iostream>
+//#include<iostream>
+//using namespace std;
+//#include<string>
+//#include<vector>
+//#include<deque>
+//#include<algorithm>
+//#include<ctime>
+//
+//class Person
+//{
+//public:
+//	Person(string name, double score);
+//
+//    string m_Name;
+//    double m_Score;
+//};
+//
+//Person::Person(string name, double score)
+//{
+//	this->m_Name = name;
+//    this->m_Score = score;
+//}
+//
+//void CreatePerson(vector<Person>& v)
+//{
+//	string NameSeed = "ABCDE";
+//	for (int i = 0; i < 5; i++)
+//	{
+//		string name = "选手";
+//		name+=NameSeed[i];
+//
+//		double score = 0;
+//
+//		Person p(name, score);
+//
+//		v.push_back(p);
+//	}
+//}
+//
+//void SetScore(vector<Person>& v)
+//{
+//	for (vector<Person>::iterator it = v.begin(); it != v.end(); it++)
+//	{
+//		deque<double>d;
+//		for (int i = 0; i < 10; i++)
+//		{
+//			double score = rand() % 41 + 60;
+//			d.push_back(score);
+//		}
+//
+//		sort(d.begin(), d.end());
+//
+//		d.pop_front();
+//        d.pop_back();
+//
+//		double avg = 0;
+//
+//		for (deque<double>::iterator dit = d.begin(); dit != d.end(); dit++)
+//		{
+//			avg+=*dit;
+//		}
+//
+//        avg = avg / d.size();
+//
+//		it->m_Score = avg;
+//	}
+//
+//}
+//
+//void ShowPerson(vector<Person>& v)
+//{
+//    for (vector<Person>::iterator it = v.begin(); it != v.end(); it++)
+//    {
+//        cout<<"姓名："<<it->m_Name<<" "<<"分数："<<it->m_Score<<endl;
+//    }
+//}
+//
+//int main()
+//{
+//	srand(time(NULL));
+//
+//	vector<Person>v;
+//
+//	CreatePerson(v);
+//
+//	ShowPerson(v);
+//
+//	SetScore(v);
+//
+//	system("pause");
+//	return 0;
+//}
+
+//#include <iostream>
+//using namespace std;
+//#include <list>
+//
+//void printList(const list<int>& L) 
+//{
+//
+//	for (list<int>::const_iterator it = L.begin(); it != L.end(); it++) 
+//	{
+//		cout << *it << " ";
+//	}
+//	cout << endl;
+//}
+//
+//void test01()
+//{
+//	list<int>L1;
+//	L1.push_back(10);
+//	L1.push_back(20);
+//	L1.push_back(30);
+//	L1.push_back(40);
+//
+//	printList(L1);
+//
+//	list<int>L2(L1.begin(), L1.end());
+//	printList(L2);
+//
+//	list<int>L3(L2);
+//	printList(L3);
+//
+//	list<int>L4(10, 1000);
+//	printList(L4);
+//}
+//
+//int main() 
+//{
+//
+//	test01();
+//
+//	system("pause");
+//
+//	return 0;
+//}
+
+//#include <iostream>
+//using namespace std;
+//#include <list>
+//
+//void printList(const list<int>& L)
+//{
+//
+//	for (list<int>::const_iterator it = L.begin(); it != L.end(); it++)
+//	{
+//		cout << *it << " ";
+//	}
+//	cout << endl;
+//}
+//
+//void test02()
+//{
+//
+//	list<int>L1;
+//	L1.push_back(10);
+//	L1.push_back(20);
+//	L1.push_back(30);
+//	L1.push_back(40);
+//
+//	list<int>L2;
+//	L2.assign(10, 100);
+//
+//	cout << "交换前： " << endl;
+//	printList(L1);
+//	printList(L2);
+//
+//	cout << endl;
+//
+//	L1.swap(L2);
+//
+//	cout << "交换后： " << endl;
+//	printList(L1);
+//	printList(L2);
+//
+//}
+//
+//int main() 
+//{
+//
+//	test02();
+//
+//	system("pause");
+//
+//	return 0;
+//}
+
+//#include <iostream>
+//using namespace std;
+//#include <list>
+//
+//void printList(const list<int>& L) 
+//{
+//
+//	for (list<int>::const_iterator it = L.begin(); it != L.end(); it++) {
+//		cout << *it << " ";
+//	}
+//	cout << endl;
+//}
+//
+////大小操作
+//void test01()
+//{
+//	list<int>L1;
+//	L1.push_back(10);
+//	L1.push_back(20);
+//	L1.push_back(30);
+//	L1.push_back(40);
+//
+//	if (L1.empty())
+//	{
+//		cout << "L1为空" << endl;
+//	}
+//	else
+//	{
+//		cout << "L1不为空" << endl;
+//		cout << "L1的大小为： " << L1.size() << endl;
+//	}
+//
+//	//重新指定大小
+//	L1.resize(10);
+//	printList(L1);
+//
+//	L1.resize(2);
+//	printList(L1);
+//}
+//
+//int main() 
+//{
+//
+//	test01();
+//
+//	system("pause");
+//
+//	return 0;
+//}
+
+//#include <iostream>
+//using namespace std;
+//#include <list>
+//
+//void printList(const list<int>& L) {
+//
+//	for (list<int>::const_iterator it = L.begin(); it != L.end(); it++) {
+//		cout << *it << " ";
+//	}
+//	cout << endl;
+//}
+//
+////插入和删除
+//void test01()
+//{
+//	list<int> L;
+//	//尾插
+//	L.push_back(10);
+//	L.push_back(20);
+//	L.push_back(30);
+//	//头插
+//	L.push_front(100);
+//	L.push_front(200);
+//	L.push_front(300);
+//
+//	printList(L);
+//
+//	//尾删
+//	L.pop_back();
+//	printList(L);
+//
+//	//头删
+//	L.pop_front();
+//	printList(L);
+//
+//	//插入
+//	list<int>::iterator it = L.begin();
+//	L.insert(++it, 1000);
+//	printList(L);
+//
+//	//删除
+//	it = L.begin();
+//	L.erase(++it);
+//	printList(L);
+//
+//	//移除
+//	L.push_back(10000);
+//	L.push_back(10000);
+//	L.push_back(10000);
+//	printList(L);
+//	L.remove(10000);
+//	printList(L);
+//
+//	//清空
+//	L.clear();
+//	printList(L);
+//}
+//
+//int main() {
+//
+//	test01();
+//
+//	system("pause");
+//
+//	return 0;
+//}
+
+//#include <iostream>
+//using namespace std;
+//#include <list>
+//
+////数据存取
+//void test01()
+//{
+//	list<int>L1;
+//	L1.push_back(10);
+//	L1.push_back(20);
+//	L1.push_back(30);
+//	L1.push_back(40);
+//
+//
+//	//cout << L1.at(0) << endl;//错误 不支持at访问数据
+//	//cout << L1[0] << endl; //错误  不支持[]方式访问数据
+//	cout << "第一个元素为： " << L1.front() << endl;
+//	cout << "最后一个元素为： " << L1.back() << endl;
+//
+//	//list容器的迭代器是双向迭代器，不支持随机访问
+//	list<int>::iterator it = L1.begin();
+//	//it = it + 1;//错误，不可以跳跃访问，即使是+1
+//}
+//
+//int main() 
+//{
+//
+//	test01();
+//
+//	system("pause");
+//
+//	return 0;
+//}
+
+//#include <iostream>
+//using namespace std;
+//#include <list>
+//
+//void printList(const list<int>& L) 
+//{
+//
+//	for (list<int>::const_iterator it = L.begin(); it != L.end(); it++) 
+//	{
+//		cout << *it << " ";
+//	}
+//	cout << endl;
+//}
+//
+//bool myCompare(int val1, int val2)
+//{
+//	return val1 > val2;
+//}
+//
+////反转和排序
+//void test01()
+//{
+//	list<int> L;
+//	L.push_back(90);
+//	L.push_back(30);
+//	L.push_back(20);
+//	L.push_back(70);
+//	printList(L);
+//
+//	//反转容器的元素
+//	L.reverse();
+//	printList(L);
+//
+//	//排序
+//	L.sort(); //默认的排序规则 从小到大
+//	printList(L);
+//
+//	L.sort(myCompare); //指定规则，从大到小
+//	printList(L);
+//}
+//
+//int main() 
+//{
+//
+//	test01();
+//
+//	system("pause");
+//
+//	return 0;
+//}
+
+//#include <iostream>
+//using namespace std;
+//#include <list>
+//#include <string>
+//class Person {
+//public:
+//	Person(string name, int age, int height) {
+//		m_Name = name;
+//		m_Age = age;
+//		m_Height = height;
+//	}
+//
+//public:
+//	string m_Name;  //姓名
+//	int m_Age;      //年龄
+//	int m_Height;   //身高
+//};
+//
+//
+//bool ComparePerson(Person& p1, Person& p2) {
+//
+//	if (p1.m_Age == p2.m_Age) {
+//		return p1.m_Height > p2.m_Height;
+//	}
+//	else
+//	{
+//		return  p1.m_Age < p2.m_Age;
+//	}
+//
+//}
+//
+//void test01() {
+//
+//	list<Person> L;
+//
+//	Person p1("刘备", 35, 175);
+//	Person p2("曹操", 45, 180);
+//	Person p3("孙权", 40, 170);
+//	Person p4("赵云", 25, 190);
+//	Person p5("张飞", 35, 160);
+//	Person p6("关羽", 35, 200);
+//
+//	L.push_back(p1);
+//	L.push_back(p2);
+//	L.push_back(p3);
+//	L.push_back(p4);
+//	L.push_back(p5);
+//	L.push_back(p6);
+//
+//	for (list<Person>::iterator it = L.begin(); it != L.end(); it++) {
+//		cout << "姓名： " << it->m_Name << " 年龄： " << it->m_Age
+//			<< " 身高： " << it->m_Height << endl;
+//	}
+//
+//	cout << "---------------------------------" << endl;
+//	L.sort(ComparePerson); //排序
+//
+//	for (list<Person>::iterator it = L.begin(); it != L.end(); it++) {
+//		cout << "姓名： " << it->m_Name << " 年龄： " << it->m_Age
+//			<< " 身高： " << it->m_Height << endl;
+//	}
+//}
+//
+//int main() {
+//
+//	test01();
+//
+//	system("pause");
+//
+//	return 0;
+//}
+
+//#include <iostream>
+//using namespace std;
+//#include <set>
+//
+//void printSet(set<int>& s)
+//{
+//	for (set<int>::iterator it = s.begin(); it != s.end(); it++)
+//	{
+//		cout << *it << " ";
+//	}
+//	cout << endl;
+//}
+//
+////构造和赋值
+//void test01()
+//{
+//	set<int> s1;
+//
+//	s1.insert(10);
+//	s1.insert(30);
+//	s1.insert(20);
+//	s1.insert(40);
+//	printSet(s1);
+//
+//	//拷贝构造
+//	set<int>s2(s1);
+//	printSet(s2);
+//
+//	//赋值
+//	set<int>s3;
+//	s3 = s2;
+//	printSet(s3);
+//}
+//
+//int main() {
+//
+//	test01();
+//
+//	system("pause");
+//
+//	return 0;
+//}
+
+//#include <iostream>
+//using namespace std;
+//#include <set>
+//
+//void printSet(set<int>& s)
+//{
+//	for (set<int>::iterator it = s.begin(); it != s.end(); it++)
+//	{
+//		cout << *it << " ";
+//	}
+//	cout << endl;
+//}
+//
+////大小
+//void test01()
+//{
+//
+//	set<int> s1;
+//
+//	s1.insert(10);
+//	s1.insert(30);
+//	s1.insert(20);
+//	s1.insert(40);
+//
+//	if (s1.empty())
+//	{
+//		cout << "s1为空" << endl;
+//	}
+//	else
+//	{
+//		cout << "s1不为空" << endl;
+//		cout << "s1的大小为： " << s1.size() << endl;
+//	}
+//
+//}
+//
+////交换
+//void test02()
+//{
+//	set<int> s1;
+//
+//	s1.insert(10);
+//	s1.insert(30);
+//	s1.insert(20);
+//	s1.insert(40);
+//
+//	set<int> s2;
+//
+//	s2.insert(100);
+//	s2.insert(300);
+//	s2.insert(200);
+//	s2.insert(400);
+//
+//	cout << "交换前" << endl;
+//	printSet(s1);
+//	printSet(s2);
+//	cout << endl;
+//
+//	cout << "交换后" << endl;
+//	s1.swap(s2);
+//	printSet(s1);
+//	printSet(s2);
+//}
+//
+//int main() {
+//
+//	test01();
+//
+//	test02();
+//
+//	system("pause");
+//
+//	return 0;
+//}
+
+//#include <iostream>
+//using namespace std;
+//#include <set>
+//
+//void printSet(set<int>& s)
+//{
+//	for (set<int>::iterator it = s.begin(); it != s.end(); it++)
+//	{
+//		cout << *it << " ";
+//	}
+//	cout << endl;
+//}
+//
+////插入和删除
+//void test01()
+//{
+//	set<int> s1;
+//	//插入
+//	s1.insert(10);
+//	s1.insert(30);
+//	s1.insert(20);
+//	s1.insert(40);
+//	printSet(s1);
+//
+//	//删除
+//	s1.erase(s1.begin());
+//	printSet(s1);
+//
+//	s1.erase(30);//删除指定元素
+//	printSet(s1);
+//
+//	//清空
+//	//s1.erase(s1.begin(), s1.end());
+//	s1.clear();
+//	printSet(s1);
+//}
+//
+//int main() {
+//
+//	test01();
+//
+//	system("pause");
+//
+//	return 0;
+//}
+
+//#include <iostream>
+//using namespace std;
+//#include <set>
+//
+////查找和统计
+//void test01()
+//{
+//	set<int> s1;
+//	//插入
+//	s1.insert(10);
+//	s1.insert(30);
+//	s1.insert(20);
+//	s1.insert(40);
+//
+//	//查找
+//	set<int>::iterator pos = s1.find(30);
+//
+//	if (pos != s1.end())
+//	{
+//		cout << "找到了元素 ： " << *pos << endl;
+//	}
+//	else
+//	{
+//		cout << "未找到元素" << endl;
+//	}
+//
+//	//统计
+//	int num = s1.count(30);
+//	cout << "num = " << num << endl;
+//}
+//
+//int main() 
+//{
+//
+//	test01();
+//
+//	system("pause");
+//
+//	return 0;
+//}
+
+//#include <iostream>
+//using namespace std;
+//#include <set>
+//
+//class MyCompare
+//{
+//public:
+//	bool operator()(int v1, int v2) {
+//		return v1 > v2;
+//	}
+//};
+//void test01()
+//{
+//	set<int> s1;
+//	s1.insert(10);
+//	s1.insert(40);
+//	s1.insert(20);
+//	s1.insert(30);
+//	s1.insert(50);
+//
+//	//默认从小到大
+//	for (set<int>::iterator it = s1.begin(); it != s1.end(); it++) {
+//		cout << *it << " ";
+//	}
+//	cout << endl;
+//
+//	//指定排序规则
+//	set<int, MyCompare> s2;
+//	s2.insert(10);
+//	s2.insert(40);
+//	s2.insert(20);
+//	s2.insert(30);
+//	s2.insert(50);
+//
+//	for (set<int, MyCompare>::iterator it = s2.begin(); it != s2.end(); it++) {
+//		cout << *it << " ";
+//	}
+//	cout << endl;
+//}
+//
+//int main() {
+//
+//	test01();
+//
+//	system("pause");
+//
+//	return 0;
+//}
+
+#include <iostream>
+#include <set>
+#include <string>
 using namespace std;
-#include<string>
-#include<vector>
-#include<deque>
-#include<algorithm>
-#include<ctime>
 
 class Person
 {
 public:
-	Person(string name, double score);
+    Person(string name, int age)
+    {
+        this->m_Name = name;
+        this->m_Age = age;
+    }
 
     string m_Name;
-    double m_Score;
+    int m_Age;
 };
 
-Person::Person(string name, double score)
+class comparePerson
 {
-	this->m_Name = name;
-    this->m_Score = score;
-}
-
-void CreatePerson(vector<Person>& v)
-{
-	string NameSeed = "ABCDE";
-	for (int i = 0; i < 5; i++)
-	{
-		string name = "选手";
-		name+=NameSeed[i];
-
-		double score = 0;
-
-		Person p(name, score);
-
-		v.push_back(p);
-	}
-}
-
-void SetScore(vector<Person>& v)
-{
-	for (vector<Person>::iterator it = v.begin(); it != v.end(); it++)
-	{
-		deque<double>d;
-		for (int i = 0; i < 10; i++)
-		{
-			double score = rand() % 41 + 60;
-			d.push_back(score);
-		}
-
-		sort(d.begin(), d.end());
-
-		d.pop_front();
-        d.pop_back();
-
-		double avg = 0;
-
-		for (deque<double>::iterator dit = d.begin(); dit != d.end(); dit++)
-		{
-			avg+=*dit;
-		}
-
-        avg = avg / d.size();
-
-		it->m_Score = avg;
-	}
-
-}
-
-void ShowPerson(vector<Person>& v)
-{
-    for (vector<Person>::iterator it = v.begin(); it != v.end(); it++)
+public:
+    bool operator()(const Person& p1, const Person& p2) const
     {
-        cout<<"姓名："<<it->m_Name<<" "<<"分数："<<it->m_Score<<endl;
+        // 按照年龄进行排序，降序
+        return p1.m_Age > p2.m_Age;
     }
+};
+
+// 打印set中Person的函数
+void printPersonSet(const set<Person, comparePerson>& s)
+{
+    for (set<Person, comparePerson>::iterator it = s.begin(); it != s.end(); it++)
+    {
+        cout << "姓名： " << it->m_Name << " 年龄： " << it->m_Age << endl;
+    }
+}
+
+void test01()
+{
+    set<Person, comparePerson> s;
+
+    Person p1("刘备", 23);
+    Person p2("关羽", 27);
+    Person p3("张飞", 25);
+    Person p4("赵云", 21);
+
+    s.insert(p1);
+    s.insert(p2);
+    s.insert(p3);
+    s.insert(p4);
+
+    // 调用打印函数
+    printPersonSet(s);
 }
 
 int main()
 {
-	srand(time(NULL));
+    test01();
 
-	vector<Person>v;
+    system("pause");
 
-	CreatePerson(v);
-
-	ShowPerson(v);
-
-	SetScore(v);
-
-	system("pause");
-	return 0;
+    return 0;
 }
