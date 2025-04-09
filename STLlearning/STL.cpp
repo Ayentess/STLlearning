@@ -1833,66 +1833,349 @@
 //	return 0;
 //}
 
-#include <iostream>
-#include <set>
-#include <string>
-using namespace std;
+//#include <iostream>
+//#include <set>
+//#include <string>
+//using namespace std;
+//
+//class Person
+//{
+//public:
+//    Person(string name, int age)
+//    {
+//        this->m_Name = name;
+//        this->m_Age = age;
+//    }
+//
+//    string m_Name;
+//    int m_Age;
+//};
+//
+//class comparePerson
+//{
+//public:
+//    bool operator()(const Person& p1, const Person& p2) const
+//    {
+//        // 按照年龄进行排序，降序
+//        return p1.m_Age > p2.m_Age;
+//    }
+//};
+//
+//// 打印set中Person的函数
+//void printPersonSet(const set<Person, comparePerson>& s)
+//{
+//    for (set<Person, comparePerson>::iterator it = s.begin(); it != s.end(); it++)
+//    {
+//        cout << "姓名： " << it->m_Name << " 年龄： " << it->m_Age << endl;
+//    }
+//}
+//
+//void test01()
+//{
+//    set<Person, comparePerson> s;
+//
+//    Person p1("刘备", 23);
+//    Person p2("关羽", 27);
+//    Person p3("张飞", 25);
+//    Person p4("赵云", 21);
+//
+//    s.insert(p1);
+//    s.insert(p2);
+//    s.insert(p3);
+//    s.insert(p4);
+//
+//    // 调用打印函数
+//    printPersonSet(s);
+//}
+//
+//int main()
+//{
+//    test01();
+//
+//    system("pause");
+//
+//    return 0;
+//}
 
-class Person
-{
-public:
-    Person(string name, int age)
-    {
-        this->m_Name = name;
-        this->m_Age = age;
-    }
+//#include <iostream>
+//using namespace std;
+//#include <map>
+//
+//void printMap(map<int, int>& m)
+//{
+//	for (map<int, int>::iterator it = m.begin(); it != m.end(); it++)
+//	{
+//		cout << "key = " << it->first << " value = " << it->second << endl;
+//	}
+//	cout << endl;
+//}
+//
+//void test01()
+//{
+//	map<int, int>m; //默认构造
+//	m.insert(make_pair(1, 10));
+//	m.insert(make_pair<int, int>(2, 20));
+//	m.insert(make_pair<int, int>(3, 30));
+//	printMap(m);
+//
+//	map<int, int>m2(m); //拷贝构造
+//	printMap(m2);
+//
+//	map<int, int>m3;
+//	m3 = m2; //赋值
+//	printMap(m3);
+//}
+//
+//int main() {
+//
+//	test01();
+//
+//	system("pause");
+//
+//	return 0;
+//}
 
-    string m_Name;
-    int m_Age;
-};
+//#include <iostream>
+//using namespace std;
+//#include <map>
+//
+//void printMap(map<int, int>& m)
+//{
+//	for (map<int, int>::iterator it = m.begin(); it != m.end(); it++)
+//	{
+//		cout << "key = " << it->first << " value = " << it->second << endl;
+//	}
+//	cout << endl;
+//}
+//
+//void test01()
+//{
+//	map<int, int>m;
+//	m.insert(pair<int, int>(1, 10));
+//	m.insert(pair<int, int>(2, 20));
+//	m.insert(pair<int, int>(3, 30));
+//
+//	if (m.empty())
+//	{
+//		cout << "m为空" << endl;
+//	}
+//	else
+//	{
+//		cout << "m不为空" << endl;
+//		cout << "m的大小为： " << m.size() << endl;
+//	}
+//}
+//
+//
+////交换
+//void test02()
+//{
+//	map<int, int>m;
+//	m.insert(pair<int, int>(1, 10));
+//	m.insert(pair<int, int>(2, 20));
+//	m.insert(pair<int, int>(3, 30));
+//
+//	map<int, int>m2;
+//	m2.insert(pair<int, int>(4, 100));
+//	m2.insert(pair<int, int>(5, 200));
+//	m2.insert(pair<int, int>(6, 300));
+//
+//	cout << "交换前" << endl;
+//	printMap(m);
+//	printMap(m2);
+//
+//	cout << "交换后" << endl;
+//	m.swap(m2);
+//	printMap(m);
+//	printMap(m2);
+//}
+//
+//int main() {
+//
+//	test01();
+//
+//	test02();
+//
+//	system("pause");
+//
+//	return 0;
+//}
 
-class comparePerson
-{
-public:
-    bool operator()(const Person& p1, const Person& p2) const
-    {
-        // 按照年龄进行排序，降序
-        return p1.m_Age > p2.m_Age;
-    }
-};
+//#include <iostream>
+//using namespace std;
+//#include <map>
+//
+//void printMap(map<int, int>& m)
+//{
+//	for (map<int, int>::iterator it = m.begin(); it != m.end(); it++)
+//	{
+//		cout << "key = " << it->first << " value = " << it->second << endl;
+//	}
+//	cout << endl;
+//}
+//
+//void test01()
+//{
+//	//插入
+//	map<int, int> m;
+//	//第一种插入方式
+//	m.insert(pair<int, int>(1, 10));
+//	//第二种插入方式
+//	m.insert(make_pair(2, 20));
+//	printMap(m);
+//
+//	//删除
+//	m.erase(m.begin());
+//	printMap(m);
+//
+//	m.erase(3);//删除key指定元素
+//	printMap(m);
+//
+//	//清空
+//	m.erase(m.begin(), m.end());
+//	m.clear();
+//	printMap(m);
+//}
+//
+//int main() {
+//
+//	test01();
+//
+//	system("pause");
+//
+//	return 0;
+//}
 
-// 打印set中Person的函数
-void printPersonSet(const set<Person, comparePerson>& s)
-{
-    for (set<Person, comparePerson>::iterator it = s.begin(); it != s.end(); it++)
-    {
-        cout << "姓名： " << it->m_Name << " 年龄： " << it->m_Age << endl;
-    }
-}
+//#include <iostream>
+//using namespace std;
+//#include <map>
+//
+////查找和统计
+//void test01()
+//{
+//	map<int, int>m;
+//	m.insert(pair<int, int>(1, 10));
+//	m.insert(pair<int, int>(2, 20));
+//	m.insert(pair<int, int>(3, 30));
+//
+//	//查找
+//	map<int, int>::iterator pos = m.find(3);//查找key为3的元素
+//
+//	if (pos != m.end())
+//	{
+//		cout << "找到了元素 key = " << (*pos).first << " value = " << (*pos).second << endl;
+//	}
+//	else
+//	{
+//		cout << "未找到元素" << endl;
+//	}
+//
+//	//统计
+//	int num = m.count(3);
+//	cout << "num = " << num << endl;
+//}
+//
+//int main() {
+//
+//	test01();
+//
+//	system("pause");
+//
+//	return 0;
+//}
 
-void test01()
-{
-    set<Person, comparePerson> s;
+//#include <iostream>
+//using namespace std;
+//#include <map>
+//
+//class MyCompare {
+//public:
+//	bool operator()(int v1, int v2) const//const限定
+//	{
+//		return v1 > v2;
+//	}
+//};
+//
+//void test01()
+//{
+//	//默认从小到大排序
+//	//利用仿函数实现从大到小排序
+//	map<int, int, MyCompare> m;
+//
+//	m.insert(make_pair(1, 10));
+//	m.insert(make_pair(2, 20));
+//	m.insert(make_pair(3, 30));
+//	m.insert(make_pair(4, 40));
+//	m.insert(make_pair(5, 50));
+//
+//	for (map<int, int, MyCompare>::iterator it = m.begin(); it != m.end(); it++) {
+//		cout << "key:" << it->first << " value:" << it->second << endl;
+//	}
+//}
+//int main() {
+//
+//	test01();
+//
+//	system("pause");
+//
+//	return 0;
+//}
 
-    Person p1("刘备", 23);
-    Person p2("关羽", 27);
-    Person p3("张飞", 25);
-    Person p4("赵云", 21);
-
-    s.insert(p1);
-    s.insert(p2);
-    s.insert(p3);
-    s.insert(p4);
-
-    // 调用打印函数
-    printPersonSet(s);
-}
-
-int main()
-{
-    test01();
-
-    system("pause");
-
-    return 0;
-}
+//#include <iostream>
+//using namespace std;
+//#include <map>
+//
+//class Person
+//{
+//public:
+//	Person(int age, int weight)
+//	{
+//		this->m_Age = age;
+//		this->m_weight = weight;
+//	}
+//
+//	int m_Age;
+//	int m_weight;
+//};
+//
+//class MyCompare {
+//public:
+//	bool operator()(const Person&v1, const Person&v2) const//const限定
+//	{
+//		return v1.m_Age > v2.m_Age;
+//	}
+//};
+//
+//void test01()
+//{
+//	//默认从小到大排序
+//	//利用仿函数实现从大到小排序
+//
+//	Person p1(10, 10);
+//	Person p2(20, 20);
+//	Person p3(30, 30);
+//	Person p4(40, 40);
+//	Person p5(50, 50);
+//
+//
+//	map<Person,int, MyCompare> m;
+//
+//	m.insert(make_pair(p1, 100));
+//	m.insert(make_pair(p2, 200));
+//	m.insert(make_pair(p3, 300));
+//	m.insert(make_pair(p4, 400));
+//	m.insert(make_pair(p5, 500));
+//
+//	for (map<Person, int, MyCompare>::iterator it = m.begin(); it != m.end(); it++) 
+//	{
+//		cout << "key:" << it->first.m_Age << " weight:" << it->first.m_Age << ", value: " << it->second << endl;
+//	}
+//}
+//int main() {
+//
+//	test01();
+//
+//	system("pause");
+//
+//	return 0;
+//}
